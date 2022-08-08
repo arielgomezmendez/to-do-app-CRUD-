@@ -9,7 +9,8 @@ body {
     height: 100vh;
   }
 
-  .app {
+  /*div with the classname app */
+.app {
     background-color: #fff;
     width: 300px;
     height: 500px;
@@ -17,3 +18,20 @@ body {
     border-radius: 8px;
     padding: 15px;
   }
+
+/*Button with the id addNew */
+#addNew {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(171, 206, 161, 0.35);
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/*Plus icon*/
+.fa-plus {
+    background-color: #abcea1;
+    padding: 3px;
+    border-radius: 3px;
+}
