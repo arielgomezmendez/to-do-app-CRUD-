@@ -26,22 +26,32 @@
         </div>
 
         <h5 class="text-center my-3">Tasks</h5>
-        
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Launch demo modal
-        </button>
-        
+
         <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <form class="modal fade" id="form" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Add New Task</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                ...
+                    <p>Task Title</p>
+                    <input type="text" class="form-control" name="" id="textInput" />
+                    <div id="msg"></div>
+                    <br />
+                    <p>Due Date</p>
+                    <input type="date" class="form-control" name="" id="dateInput" />
+                    <br />
+                    <p>Description</p>
+                    <textarea
+                    name=""
+                    class="form-control"
+                    id="textarea"
+                    cols="30"
+                    rows="5"
+                    ></textarea>
+                
                 </div>
                 <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -49,7 +59,7 @@
                 </div>
             </div>
             </div>
-        </div>
+        </form>
 
         <div id="tasks"></div>
 
