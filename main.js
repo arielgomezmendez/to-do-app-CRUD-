@@ -8,8 +8,6 @@ let msg = document.getElementById("msg");
 let tasks = document.getElementById("tasks");
 let add = document.getElementById("add");
 
-let data = {};
-
 /*validate the input fields*/
 form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -26,4 +24,16 @@ let formValidation = () => {
       acceptData(); 
     }
 };
+
+//Collect the data from the input fields, using the function named acceptData and an object named data.
+let data = {};
+
+let acceptData = () => {
+    data["text"] = textInput.value,
+    data["date"] = dateInput.value,
+    data["description"] = textarea.value,
+
+    console.log(data);
+};
+
 
