@@ -35,3 +35,6 @@ body {
     padding: 3px;
     border-radius: 3px;
 }
+#msg {
+    color: red;
+  }

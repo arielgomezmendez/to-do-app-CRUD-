@@ -8,11 +8,14 @@ let msg = document.getElementById("msg");
 let tasks = document.getElementById("tasks");
 let add = document.getElementById("add");
 
+let data = {};
+
 /*validate the input fields*/
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-    formValidation();
+    formValidation(); 
 });
+
 let formValidation = () => {
     if (textInput.value === "") {
       console.log("failure");
@@ -20,5 +23,7 @@ let formValidation = () => {
     } else {
       console.log("success");
       msg.innerHTML = "";
+      acceptData(); 
     }
 };
+
