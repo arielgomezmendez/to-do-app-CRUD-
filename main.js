@@ -50,6 +50,14 @@ let createTasks = () => {
             <i onClick ="deleteTask(this);createTasks()" class="fas fa-trash-alt"></i>
           </span>
     </div>`;
-  };
+    resetForm();
+};
+
+let resetForm = () => {
+    textInput.value = "";
+    dateInput.value = "";
+    textarea.value = "";
+};
+
 
 
