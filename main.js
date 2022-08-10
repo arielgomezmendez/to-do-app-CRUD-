@@ -27,13 +27,29 @@ let formValidation = () => {
 
 //Collect the data from the input fields, using the function named acceptData and an object named data.
 let data = {};
-
 let acceptData = () => {
     data["text"] = textInput.value,
     data["date"] = dateInput.value,
     data["description"] = textarea.value,
 
     console.log(data);
+    createTasks();
 };
+
+/* Create task, with a function, use template literals to create the HTML elements,
+   and use a map to push the data collected from the user inside the template.  */
+let createTasks = () => {
+    tasks.innerHTML = `
+    <div >
+          <span class="fw-bold">${data.text}</span>
+          <span class="small text-secondary">${data.date}</span>
+          <p>${data.description}</p>
+  
+          <span class="options">
+            <i onClick= "editTask(this)" data-bs-toggle="modal" data-bs-target="#form" class="fas fa-edit"></i>
+            <i onClick ="deleteTask(this);createTasks()" class="fas fa-trash-alt"></i>
+          </span>
+    </div>`;
+  };
 
 
