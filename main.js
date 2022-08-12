@@ -7,13 +7,12 @@ let msg = document.getElementById("msg");
 let tasks = document.getElementById("tasks");
 let add = document.getElementById("add");
 
-/*validate the input fields*/
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   formValidation();
 });
 
-//Collect the data from the input fields, using the function named acceptData and an object named data.
+/*validate the input fields*/
 let formValidation = () => {
   if (textInput.value === "") {
     console.log("failure");
@@ -33,6 +32,7 @@ let formValidation = () => {
 
 let data = [{}];
 
+//Collect the data from the input fields, using the function named acceptData and an object named data.
 let acceptData = () => {
   data.push({
     text: textInput.value,
@@ -93,6 +93,7 @@ let resetForm = () => {
   textarea.value = "";
 };
 
+/*Get data from local storage */
 (() => {
   data = JSON.parse(localStorage.getItem("data")) || []
   console.log(data);
