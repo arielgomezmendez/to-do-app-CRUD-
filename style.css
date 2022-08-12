@@ -17,7 +17,12 @@ body {
     border: 5px solid #abcea1;
     border-radius: 8px;
     padding: 15px;
+    overflow-y: scroll;
   }
+/*Resolve scroll*/
+.app::-webkit-scrollbar {
+    width: 0 !important;
+}  
 
 /*Button with the id addNew */
 #addNew {

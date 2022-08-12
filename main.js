@@ -1,4 +1,4 @@
-
+/*Select all the selectors from the HTML */
 let form = document.getElementById("form");
 let textInput = document.getElementById("textInput");
 let dateInput = document.getElementById("dateInput");
@@ -7,11 +7,13 @@ let msg = document.getElementById("msg");
 let tasks = document.getElementById("tasks");
 let add = document.getElementById("add");
 
+/*validate the input fields*/
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   formValidation();
 });
 
+//Collect the data from the input fields, using the function named acceptData and an object named data.
 let formValidation = () => {
   if (textInput.value === "") {
     console.log("failure");
@@ -43,7 +45,8 @@ let acceptData = () => {
   console.log(data);
   createTasks();
 };
-
+/* Create task, with a function, use template literals to create the HTML elements,
+   and use a map to push the data collected from the user inside the template.  */
 let createTasks = () => {
   tasks.innerHTML = "";
   data.map((x, y) => {
@@ -64,6 +67,7 @@ let createTasks = () => {
   resetForm();
 };
 
+/*Delete function */
 let deleteTask = (e) => {
   e.parentElement.parentElement.remove();
   data.splice(e.parentElement.parentElement.id, 1);
@@ -71,7 +75,7 @@ let deleteTask = (e) => {
   console.log(data);
   
 };
-
+ /*Edit function */
 let editTask = (e) => {
   let selectedTask = e.parentElement.parentElement;
 
@@ -82,6 +86,7 @@ let editTask = (e) => {
   deleteTask(e);
 };
 
+/*Reset function */
 let resetForm = () => {
   textInput.value = "";
   dateInput.value = "";
